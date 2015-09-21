@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>简易的播放器 | kaychen</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="http://littlewhitechen.github.io/img/icon/litIcon.ico">
+    <!-- 引入video.js的样式文件 -->
+    <link rel="stylesheet" type="text/css" href="css/video-js.css" />
+    <!-- 如果没有使用Modernizr，则使用以下代码做shiv -->
+    <script type="text/javascript">
+    document.createElement('video');
+    document.createElement('audio');
+    document.createElement('track');
+    </script>
+    <!-- 引入video.js的脚本文件 -->
+    <script src="js/video.js" type="text/javascript" charset="utf-8"></script>
+    <!-- 指定videojs的flash文件 -->
+    <script type="text/javascript">
+    videojs.options.flash.swf = "js/video-js.swf";
+    </script>
+</head>
+
+<body>
+    <div class="video_box" style="position: absolute;top: 50%;left: 50%;margin-left: -424px;margin-top: -240px;width:848px;height:480px;">
+        <video id="sample_video" preload="true" controls class="video-js vjs-default-skin vjs-big-play-centered" data-setup='{ "controls": true, "autoplay": false, "preload": "true", "poster": "images/bg_player_play.png", "width": 848, "height": 480 }'>
+            <source src="http://static.smartisanos.cn/common/video/staff-interview-jianguo-design.mp4" type="video/mp4" />
+            <!-- <source src="videos/sample_video.mp4" type='video/mp4' /> -->
+            <!-- 如果浏览器不兼容HTML5则使用flash播放 -->
+            <object id="sample_video" class="vjs-flash-fallback" width="852" height="480" type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">
+                <param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />
+                <param name="allowfullscreen" value="true" />
+                <param name="flashvars" value='config={"playlist":["images/bg_player_play.png", {"url": "videos/sample_video.mp4","autoPlay":false,"autoBuffering":true}]}' />
+                <!-- 视频图片. -->
+                <img src="images/sample_video.png" width="852" height="480" alt="Poster Image" title="No video playback capabilities." />
+            </object>
+        </video>
+    </div>
+    <script type="text/javascript">
+    var myPlayer = null;
+    $(document).ready(function() {
+
+        if (!myPlayer) {
+            // Using the video's ID or element
+            myPlayer = videojs("video_center_video");
+        }
+        // After you have references to your players you can...(example)
+        myPlayer.play(); // Starts playing the video for this player.
+
+    });
+    </script>
+</body>
+
+</html>

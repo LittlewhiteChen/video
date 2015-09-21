@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>简易的播放器 | kaychen</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="http://littlewhitechen.github.io/img/icon/litIcon.ico">
+    <!-- Chang URLs to wherever Video.js files will be hosted -->
+    <link href="js/video-js.css" rel="stylesheet" type="text/css">
+    <!-- video.js must be in the <head> for older IEs to work. -->
+    <script src="js/video.js"></script>
+    <!-- Unless using the CDN hosted version, update the URL to the Flash SWF -->
+    <script>
+    videojs.options.flash.swf = "js/video-js.swf";
+    </script>
+</head>
+
+<body>
+    <div class="video_box" style="position: absolute;top: 50%;left: 50%;margin-left: -424px;margin-top: -240px;width:848px;height:480px;">
+        <video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="848" height="480" poster="" data-setup="{}">
+            <source src="http://static.smartisanos.cn/common/video/staff-interview-jianguo-design.mp4" type="video/mp4" />
+            <source src="http://static.smartisanos.cn/common/video/staff-interview-jianguo-design.mp4" type='video/mp4' />
+            <source src="http://static.smartisanos.cn/common/video/staff-interview-jianguo-design.webm" type='video/webm' />
+            <source src="http://static.smartisanos.cn/common/video/staff-interview-jianguo-design.ogv" type='video/ogg' />
+            <track kind="captions" src="js/demo.captions.vtt" srclang="en" label="English"></track>
+            <!-- Tracks need an ending tag thanks to IE9 -->
+            <track kind="subtitles" src="js/demo.captions.vtt" srclang="en" label="English"></track>
+            <!-- Tracks need an ending tag thanks to IE9 -->
+            <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+        </video>
+    </div>
+
+</body>
+
+</html>
