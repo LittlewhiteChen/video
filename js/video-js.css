@@ -584,7 +584,7 @@ easily in the skin designer. http://designer.videojs.com/
     opacity: 1;
     /* background-color: #07141e; */
     /* background-color: rgba(7, 20, 30, 0.7); */
-    /* border: 0.1em solid #3b4249; */
+     border: 1px solid rgba(255,255,255,0.1);
     /* -webkit-border-radius: 0.8em; */
     /* -moz-border-radius: 0.8em; */
     border-radius: 2em;
@@ -634,15 +634,15 @@ easily in the skin designer. http://designer.videojs.com/
 .vjs-default-skin:hover .vjs-big-play-button,
 .vjs-default-skin .vjs-big-play-button:focus {
     outline: 0;
-    border-color: #fff;
+    border-color: #EF1959;
     /* IE8 needs a non-glow hover state */
     /*background-color: #505050;
   background-color: rgba(50, 50, 50, 0.75);*/
     background-color: rgba(7, 20, 30, 0);
     /* box-shadow */
-    -webkit-box-shadow: 0 0 3em #ffffff;
-    -moz-box-shadow: 0 0 3em #ffffff;
-    box-shadow: 0 0 3em #ffffff;
+    -webkit-box-shadow: 0 0 5em #ffffff;
+    -moz-box-shadow: 0 0 5em #ffffff;
+    box-shadow: 0 0 5em #ffffff;
     /* transition */
     -webkit-transition: all 0s;
     -moz-transition: all 0s;
